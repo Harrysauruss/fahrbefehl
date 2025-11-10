@@ -27,8 +27,8 @@ export default function Home() {
   useEffect(() => {
     const loadData = async () => {
       const data = await getVehiclesData()
-      setVehicles(data.vehicles)
-      setTrailers(data.trailers)
+      setVehicles(data?.vehicles || [])
+      setTrailers(data?.trailers || [])
     }
     loadData()
   }, [])
