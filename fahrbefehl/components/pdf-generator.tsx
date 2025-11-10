@@ -359,7 +359,7 @@ export async function generatePDF(combination: Combination) {
 
   return new Promise((resolve, reject) => {
     html2pdf()
-      .set(opt)
+      .set(opt as any)
       .from(htmlContent)
       .save()
       .then(() => resolve(filename))

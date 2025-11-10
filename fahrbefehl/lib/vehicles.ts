@@ -13,7 +13,7 @@ export async function getVehiclesData() {
 export function getVehicleIcon(vehicle: Fahrzeug): string {
   if (vehicle.typ === "zugfahrzeug") {
     if (vehicle.anzahl_achsen === 2) return "🚙"
-    if (vehicle.anzahl_achsen === 4 && vehicle.gesamtgewicht_kg < 20000) return "🚗"
+    if (vehicle.anzahl_achsen === 4 && vehicle.gewichte.gesamtgewicht_kg < 20000) return "🚗"
     if (vehicle.anzahl_achsen === 4) return "🚐"
     return "🏎️"
   }
