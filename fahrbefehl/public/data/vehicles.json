@@ -1,0 +1,166 @@
+{
+  "vehicles": [
+    {
+      "id": "duro_iii_p",
+      "name": "Duro III P (geschützt)",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "C",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 6.75,
+        "breite_m": 2.16,
+        "hoehe_m": 2.65
+      },
+      "gewichte": {
+        "leergewicht_kg": 7200,
+        "nutzlast_kg": 1300,
+        "gesamtgewicht_kg": 8500
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 3500,
+        "max_zuggesamtgewicht_kg": 12000
+      }
+    },
+    {
+      "id": "mowag_piranha_iii",
+      "name": "MOWAG Piranha III",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "C",
+      "anzahl_achsen": 4,
+      "abmessungen": {
+        "laenge_m": 7.14,
+        "breite_m": 2.5,
+        "hoehe_m": 2.3
+      },
+      "gewichte": {
+        "leergewicht_kg": 12500,
+        "nutzlast_kg": 2500,
+        "gesamtgewicht_kg": 15000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 5000,
+        "max_zuggesamtgewicht_kg": 18000
+      }
+    },
+    {
+      "id": "leopard_2a4",
+      "name": "Leopard 2A4 Panzer",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "D",
+      "anzahl_achsen": 4,
+      "abmessungen": {
+        "laenge_m": 9.67,
+        "breite_m": 3.27,
+        "hoehe_m": 2.79
+      },
+      "gewichte": {
+        "leergewicht_kg": 55200,
+        "nutzlast_kg": 0,
+        "gesamtgewicht_kg": 55200
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "keine",
+        "max_anhaengelast_kg": 0,
+        "max_zuggesamtgewicht_kg": 55200
+      }
+    },
+    {
+      "id": "hummer_h1",
+      "name": "HUMMER H1",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "C",
+      "anzahl_achsen": 4,
+      "abmessungen": {
+        "laenge_m": 5.69,
+        "breite_m": 2.49,
+        "hoehe_m": 2.04
+      },
+      "gewichte": {
+        "leergewicht_kg": 5670,
+        "nutzlast_kg": 1130,
+        "gesamtgewicht_kg": 6800
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 3000,
+        "max_zuggesamtgewicht_kg": 10000
+      }
+    }
+  ],
+  "trailers": [
+    {
+      "id": "anhaenger_2t_plane",
+      "name": "Anhänger 2t (Plane)",
+      "typ": "anhaenger",
+      "kategorie_ausweis": "BE",
+      "anzahl_achsen": 1,
+      "abmessungen": {
+        "laenge_m": 4.8,
+        "breite_m": 2.1,
+        "hoehe_m": 2.4
+      },
+      "gewichte": {
+        "leergewicht_kg": 900,
+        "nutzlast_kg": 1100,
+        "gesamtgewicht_kg": 2000
+      },
+      "kompatible_zugfahrzeuge": ["C", "CE"]
+    },
+    {
+      "id": "anhaenger_3t_kippladung",
+      "name": "Anhänger 3t (Kippladung)",
+      "typ": "anhaenger",
+      "kategorie_ausweis": "BE",
+      "anzahl_achsen": 1,
+      "abmessungen": {
+        "laenge_m": 5.2,
+        "breite_m": 2.3,
+        "hoehe_m": 1.8
+      },
+      "gewichte": {
+        "leergewicht_kg": 1200,
+        "nutzlast_kg": 1800,
+        "gesamtgewicht_kg": 3000
+      },
+      "kompatible_zugfahrzeuge": ["C", "CE"]
+    },
+    {
+      "id": "anhaenger_4t_container",
+      "name": "Anhänger 4t (Container)",
+      "typ": "anhaenger",
+      "kategorie_ausweis": "CE",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 6.0,
+        "breite_m": 2.4,
+        "hoehe_m": 3.0
+      },
+      "gewichte": {
+        "leergewicht_kg": 1600,
+        "nutzlast_kg": 2400,
+        "gesamtgewicht_kg": 4000
+      },
+      "kompatible_zugfahrzeuge": ["C", "CE"]
+    },
+    {
+      "id": "anhaenger_5t_universal",
+      "name": "Anhänger 5t (Universal)",
+      "typ": "anhaenger",
+      "kategorie_ausweis": "CE",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 6.5,
+        "breite_m": 2.5,
+        "hoehe_m": 2.8
+      },
+      "gewichte": {
+        "leergewicht_kg": 1900,
+        "nutzlast_kg": 3100,
+        "gesamtgewicht_kg": 5000
+      },
+      "kompatible_zugfahrzeuge": ["C", "CE"]
+    }
+  ]
+}
