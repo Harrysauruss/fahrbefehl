@@ -1,91 +1,486 @@
 {
   "vehicles": [
     {
-      "id": "duro_iii_p",
-      "name": "Duro III P (geschützt)",
+      "id": "iveco_wa_7_2t_trp_4x4_gl",
+      "name": "Iveco WA 7,2T 4x4 GL",
       "typ": "zugfahrzeug",
-      "kategorie_ausweis": "C",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/iveco_wa_7_2t_trp_4x4_gl.jpg",
       "anzahl_achsen": 2,
       "abmessungen": {
-        "laenge_m": 6.75,
-        "breite_m": 2.16,
-        "hoehe_m": 2.65
+        "laenge_m": 8.57,
+        "breite_m": 2.55,
+        "hoehe_m": 3.75
       },
       "gewichte": {
-        "leergewicht_kg": 7200,
-        "nutzlast_kg": 1300,
-        "gesamtgewicht_kg": 8500
+        "leergewicht_kg": 10800,
+        "nutzlast_kg": 7200,
+        "gesamtgewicht_kg": 18000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 29200,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_lastw_verd_7t_4x4",
+      "name": "NLG VERD 7T 4x4",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_lastw_verd_7t_4x4.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 8.20,
+        "breite_m": 2.55,
+        "hoehe_m": 3.65
+      },
+      "gewichte": {
+        "leergewicht_kg": 11100,
+        "nutzlast_kg": 6900,
+        "gesamtgewicht_kg": 18000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 28900,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_13t_6x6_c625_trp",
+      "name": "NLG 13T 6x6 inkl C625 Trp",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_13t_6x6_c625_trp.jpg",
+      "anzahl_achsen": 3,
+      "abmessungen": {
+        "laenge_m": 9.23,
+        "breite_m": 2.55,
+        "hoehe_m": 3.82
+      },
+      "gewichte": {
+        "leergewicht_kg": 14400,
+        "nutzlast_kg": 11600,
+        "gesamtgewicht_kg": 26000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 25600,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_verd_hebu_12t_6x6",
+      "name": "NLG VERD HEBU 12T 6x6",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_verd_hebu_12t_6x6.jpg",
+      "anzahl_achsen": 3,
+      "abmessungen": {
+        "laenge_m": 9.48,
+        "breite_m": 2.55,
+        "hoehe_m": 3.65
+      },
+      "gewichte": {
+        "leergewicht_kg": 14000,
+        "nutzlast_kg": 12000,
+        "gesamtgewicht_kg": 26000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 26000,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_verd_hebu_11_5t_6x6",
+      "name": "NLG VERD HEBU 11.5T 6x6",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_verd_hebu_11_5t_6x6.jpg",
+      "anzahl_achsen": 3,
+      "abmessungen": {
+        "laenge_m": 9.45,
+        "breite_m": 2.55,
+        "hoehe_m": 3.65
+      },
+      "gewichte": {
+        "leergewicht_kg": 14500,
+        "nutzlast_kg": 11500,
+        "gesamtgewicht_kg": 26000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 25500,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_seilw_6t_4x4_gl",
+      "name": "NLG VERD SEILW 6T 4x4 GL",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_seilw_6t_4x4_gl.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 8.38,
+        "breite_m": 2.55,
+        "hoehe_m": 3.75
+      },
+      "gewichte": {
+        "leergewicht_kg": 12500,
+        "nutzlast_kg": 5500,
+        "gesamtgewicht_kg": 18000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 18000,
+        "max_zuggesamtgewicht_kg": 36000
+      }
+    },
+    {
+      "id": "nlg_seilw_10t_6x6_gl",
+      "name": "NLG VERD SEILW 10T 6x6 GL",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_seilw_10t_6x6_gl.jpg",
+      "anzahl_achsen": 3,
+      "abmessungen": {
+        "laenge_m": 9.81,
+        "breite_m": 2.55,
+        "hoehe_m": 3.70
+      },
+      "gewichte": {
+        "leergewicht_kg": 15500,
+        "nutzlast_kg": 9500,
+        "gesamtgewicht_kg": 25000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 18000,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_seilw_9t_6x6",
+      "name": "NLG VERD SEILW 9T 6x6",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_seilw_9t_6x6.jpg",
+      "anzahl_achsen": 3,
+      "abmessungen": {
+        "laenge_m": 9.82,
+        "breite_m": 2.55,
+        "hoehe_m": 3.70
+      },
+      "gewichte": {
+        "leergewicht_kg": 16000,
+        "nutzlast_kg": 9000,
+        "gesamtgewicht_kg": 25000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 19000,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_wls_6x6",
+      "name": "NLG WLS 6x6",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_wls_6x6.jpg",
+      "anzahl_achsen": 3,
+      "abmessungen": {
+        "laenge_m": 9.07,
+        "breite_m": 2.55,
+        "hoehe_m": 3.75
+      },
+      "gewichte": {
+        "leergewicht_kg": 16200,
+        "nutzlast_kg": 9800,
+        "gesamtgewicht_kg": 26000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 23800,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "nlg_wls_8x8",
+      "name": "NLG WLS 8x8",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "CE",
+      "bild_url": "/images/nlg_wls_8x8.jpg",
+      "anzahl_achsen": 4,
+      "abmessungen": {
+        "laenge_m": 9.80,
+        "breite_m": 2.55,
+        "hoehe_m": 3.80
+      },
+      "gewichte": {
+        "leergewicht_kg": 18300,
+        "nutzlast_kg": 13700,
+        "gesamtgewicht_kg": 32000
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 21700,
+        "max_zuggesamtgewicht_kg": 40000
+      }
+    },
+    {
+      "id": "mb_g_300_lieferw_ka_0_75t",
+      "name": "MBG",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "BE",
+      "bild_url": "/images/mb_g_300_lieferw_ka_0_75t.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 4.70,
+        "breite_m": 1.82,
+        "hoehe_m": 3.9
+      },
+      "gewichte": {
+        "leergewicht_kg": 2750,
+        "nutzlast_kg": 750,
+        "gesamtgewicht_kg": 3500
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "BE",
+        "max_anhaengelast_kg": 3500,
+        "max_zuggesamtgewicht_kg": 7000
+      }
+    },
+    {
+      "id": "sprinter_907_kleinbus_10pl_mb_316",
+      "name": "Sprinter 10PL 316",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "920 (E)",
+      "bild_url": "/images/sprinter_907_kleinbus_10pl_mb_316.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 6.20,
+        "breite_m": 2.02,
+        "hoehe_m": 2.50
+      },
+      "gewichte": {
+        "leergewicht_kg": 2850,
+        "nutzlast_kg": 650,
+        "gesamtgewicht_kg": 3500
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "BE",
+        "max_anhaengelast_kg": 3000,
+        "max_zuggesamtgewicht_kg": 6300
+      }
+    },
+    {
+      "id": "sprinter_907_mtw_12pl_mb_516",
+      "name": "Sprinter 12PL 516",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "931 (E)",
+      "bild_url": "/images/sprinter_907_mtw_12pl_mb_516.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 6.20,
+        "breite_m": 2.02,
+        "hoehe_m": 2.50
+      },
+      "gewichte": {
+        "leergewicht_kg": 3100,
+        "nutzlast_kg": 1900,
+        "gesamtgewicht_kg": 5000
       },
       "zughaken_details": {
         "erlaubte_anhaenger_kategorie": "CE",
         "max_anhaengelast_kg": 3500,
-        "max_zuggesamtgewicht_kg": 12000
+        "max_zuggesamtgewicht_kg": 7500
       }
     },
     {
-      "id": "mowag_piranha_iii",
-      "name": "MOWAG Piranha III",
+      "id": "sprinter_907_lastw_l_verd_hebu_2_3t_mb_516",
+      "name": "Sprinter VERD HEBU 516",
       "typ": "zugfahrzeug",
-      "kategorie_ausweis": "C",
-      "anzahl_achsen": 4,
+      "kategorie_ausweis": "931 (E)",
+      "bild_url": "/images/sprinter_907_lastw_l_verd_hebu_2_3t_mb_516.jpg",
+      "anzahl_achsen": 2,
       "abmessungen": {
-        "laenge_m": 7.14,
-        "breite_m": 2.5,
-        "hoehe_m": 2.3
+        "laenge_m": 6.62,
+        "breite_m": 2.22,
+        "hoehe_m": 3.05
       },
       "gewichte": {
-        "leergewicht_kg": 12500,
-        "nutzlast_kg": 2500,
-        "gesamtgewicht_kg": 15000
+        "leergewicht_kg": 3200,
+        "nutzlast_kg": 2300,
+        "gesamtgewicht_kg": 5500
       },
       "zughaken_details": {
         "erlaubte_anhaenger_kategorie": "CE",
-        "max_anhaengelast_kg": 5000,
-        "max_zuggesamtgewicht_kg": 18000
+        "max_anhaengelast_kg": 3500,
+        "max_zuggesamtgewicht_kg": 7500
       }
     },
     {
-      "id": "leopard_2a4",
-      "name": "Leopard 2A4 Panzer",
+      "id": "sprinter_313_lieferw_1t_4x4",
+      "name": "Sprinter 313",
       "typ": "zugfahrzeug",
-      "kategorie_ausweis": "D",
-      "anzahl_achsen": 4,
+      "kategorie_ausweis": "920 (E)",
+      "bild_url": "/images/sprinter_313_lieferw_1t_4x4.jpg",
+      "anzahl_achsen": 2,
       "abmessungen": {
-        "laenge_m": 9.67,
-        "breite_m": 3.27,
-        "hoehe_m": 2.79
+        "laenge_m": 5.66,
+        "breite_m": 1.933,
+        "hoehe_m": 2.43
       },
       "gewichte": {
-        "leergewicht_kg": 55200,
-        "nutzlast_kg": 0,
-        "gesamtgewicht_kg": 55200
+        "leergewicht_kg": 2430,
+        "nutzlast_kg": 1070,
+        "gesamtgewicht_kg": 3500
       },
       "zughaken_details": {
-        "erlaubte_anhaenger_kategorie": "keine",
-        "max_anhaengelast_kg": 0,
-        "max_zuggesamtgewicht_kg": 55200
+        "erlaubte_anhaenger_kategorie": "BE",
+        "max_anhaengelast_kg": 2000,
+        "max_zuggesamtgewicht_kg": 5500
       }
     },
     {
-      "id": "hummer_h1",
-      "name": "HUMMER H1",
+      "id": "sprinter_413_mat",
+      "name": "Sprinter 413 Mat",
       "typ": "zugfahrzeug",
-      "kategorie_ausweis": "C",
-      "anzahl_achsen": 4,
+      "kategorie_ausweis": "931 (E)",
+      "bild_url": "/images/sprinter_413_mat.jpg",
+      "anzahl_achsen": 2,
       "abmessungen": {
-        "laenge_m": 5.69,
-        "breite_m": 2.49,
-        "hoehe_m": 2.04
+        "laenge_m": 5.84,
+        "breite_m": 2.07,
+        "hoehe_m": 3.08
       },
       "gewichte": {
-        "leergewicht_kg": 5670,
-        "nutzlast_kg": 1130,
-        "gesamtgewicht_kg": 6800
+        "leergewicht_kg": 2880,
+        "nutzlast_kg": 1720,
+        "gesamtgewicht_kg": 4600
       },
       "zughaken_details": {
         "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 2000,
+        "max_zuggesamtgewicht_kg": 6600
+      }
+    },
+    {
+      "id": "sprinter_413_19_platz",
+      "name": "Sprinter 413 19 Platz",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "931 (E)",
+      "bild_url": "/images/sprinter_413_19_platz.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 5.84,
+        "breite_m": 2.07,
+        "hoehe_m": 3.28
+      },
+      "gewichte": {
+        "leergewicht_kg": 3030,
+        "nutzlast_kg": 1570,
+        "gesamtgewicht_kg": 4600
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "CE",
+        "max_anhaengelast_kg": 2000,
+        "max_zuggesamtgewicht_kg": 6600
+      }
+    },
+    {
+      "id": "sprinter_316_lieferw_ka_0_9t_4x4",
+      "name": "Sprinter 316",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "920 (E)",
+      "bild_url": "/images/sprinter_316_lieferw_ka_0_9t_4x4.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 5.96,
+        "breite_m": 1.993,
+        "hoehe_m": 2.49
+      },
+      "gewichte": {
+        "leergewicht_kg": 2600,
+        "nutzlast_kg": 900,
+        "gesamtgewicht_kg": 3500
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "BE",
         "max_anhaengelast_kg": 3000,
-        "max_zuggesamtgewicht_kg": 10000
+        "max_zuggesamtgewicht_kg": 6500
+      }
+    },
+    {
+      "id": "sprinter_316_kleinbus_10pl_4x4",
+      "name": "Sprinter 316 10PL",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "920 (E)",
+      "bild_url": "/images/sprinter_316_kleinbus_10pl_4x4.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 5.91,
+        "breite_m": 1.993,
+        "hoehe_m": 2.435
+      },
+      "gewichte": {
+        "leergewicht_kg": 2750,
+        "nutzlast_kg": 750,
+        "gesamtgewicht_kg": 3500
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "BE",
+        "max_anhaengelast_kg": 3000,
+        "max_zuggesamtgewicht_kg": 6500
+      }
+    },
+    {
+      "id": "duro_we_ii_6_3t",
+      "name": "Duro II",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "C1E",
+      "bild_url": "/images/duro_we_ii_6_3t.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 6.03,
+        "breite_m": 1.96,
+        "hoehe_m": 2.65
+      },
+      "gewichte": {
+        "leergewicht_kg": 4300,
+        "nutzlast_kg": 2000,
+        "gesamtgewicht_kg": 6300
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "C1E",
+        "max_anhaengelast_kg": 2700,
+        "max_zuggesamtgewicht_kg": 8800
+      }
+    },
+    {
+      "id": "duro",
+      "name": "Duro",
+      "typ": "zugfahrzeug",
+      "kategorie_ausweis": "C1E",
+      "bild_url": "/images/duro.jpg",
+      "anzahl_achsen": 2,
+      "abmessungen": {
+        "laenge_m": 6.03,
+        "breite_m": 1.96,
+        "hoehe_m": 2.66
+      },
+      "gewichte": {
+        "leergewicht_kg": 3700,
+        "nutzlast_kg": 2200,
+        "gesamtgewicht_kg": 5900
+      },
+      "zughaken_details": {
+        "erlaubte_anhaenger_kategorie": "C1E",
+        "max_anhaengelast_kg": 2000,
+        "max_zuggesamtgewicht_kg": 7900
       }
     }
   ],
