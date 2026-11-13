@@ -10,6 +10,7 @@ import Dashboard from "@/components/dashboard"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 type Step = "selection" | "cargo" | "summary"
 
@@ -76,83 +77,117 @@ export default function Home() {
     <main className="min-h-screen bg-background p-4 md:p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header with Theme Toggle */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-[4px] border-foreground pb-6 gap-4">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground">Fahrbefehl</h1>
-            <p className="text-muted-foreground text-sm md:text-base">
+            <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter text-foreground mb-2">Fahrbefehl</h1>
+            <p className="font-bold text-lg md:text-xl uppercase bg-foreground text-background inline-block px-3 py-1">
               Schweizer Militärfahrzeugkombinations-Kalkulator
             </p>
           </div>
         </div>
 
+        {/* Progress Indicator */}
+        <div className="flex flex-col sm:flex-row w-full mb-12 border-[4px] border-border bg-card shadow-[var(--shadow-brutal)]">
+          <div className={cn(
+            "flex-1 p-4 font-black uppercase tracking-widest text-center border-b-[4px] sm:border-b-0 sm:border-r-[4px] border-border transition-colors",
+            step === "selection" ? "bg-primary text-primary-foreground" : "text-muted-foreground opacity-50"
+          )}>
+            1. FAHRZEUGE WÄHLEN
+          </div>
+          <div className={cn(
+            "flex-1 p-4 font-black uppercase tracking-widest text-center border-b-[4px] sm:border-b-0 sm:border-r-[4px] border-border transition-colors",
+            step === "cargo" ? "bg-primary text-primary-foreground" : "text-muted-foreground opacity-50"
+          )}>
+            2. BELADUNG ERFASSEN
+          </div>
+          <div className={cn(
+            "flex-1 p-4 font-black uppercase tracking-widest text-center transition-colors",
+            step === "summary" ? "bg-primary text-primary-foreground" : "text-muted-foreground opacity-50"
+          )}>
+            3. ZUSAMMENFASSUNG
+          </div>
+        </div>
+
         {/* Step 1: Vehicle & Trailer Selection */}
         {step === "selection" && (
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card className="p-6">
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-32">
+              <div className="h-full">
                 <VehicleSelector
                   vehicles={vehicles}
                   selectedVehicle={combination.vehicle}
                   onSelect={handleSelectVehicle}
                 />
-              </Card>
+              </div>
 
               {combination.vehicle && (
-                <Card className="p-6">
+                <div className="h-full animate-in fade-in slide-in-from-right-8 duration-500">
                   <TrailerSelector
                     trailers={compatibleTrailers}
                     selectedTrailer={combination.trailer}
                     onSelect={handleSelectTrailer}
                   />
-                </Card>
+                </div>
               )}
             </div>
-
+            
+            {/* Sticky Action Footer */}
             {combination.vehicle && combination.trailer !== undefined && (
-              <Button onClick={() => setStep("cargo")} className="w-full py-6 text-base" size="lg">
-                Weiter zur Beladung
-              </Button>
+              <div className="fixed bottom-0 left-0 right-0 p-4 md:p-6 bg-background border-t-[4px] border-foreground z-50 animate-in slide-in-from-bottom-full duration-300">
+                <div className="max-w-6xl mx-auto flex justify-end">
+                  <Button onClick={() => { window.scrollTo(0,0); setStep("cargo") }} className="w-full md:w-auto md:min-w-[400px] py-8 text-2xl font-black uppercase tracking-widest border-[4px] border-border shadow-[var(--shadow-brutal)]">
+                    Weiter zur Beladung →
+                  </Button>
+                </div>
+              </div>
             )}
           </div>
         )}
 
         {/* Step 2: Cargo Selection */}
         {step === "cargo" && combination.vehicle && (
-          <div className="space-y-6">
-            {/* Overview Section */}
-            <Card className="p-6 border">
-              <h2 className="text-lg font-semibold mb-4 text-foreground">Fahrzeugkombination</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div>
-                  <p className="text-xs font-semibold uppercase text-muted-foreground mb-1">Zugfahrzeug</p>
-                  <p className="font-semibold text-foreground">{combination.vehicle.name}</p>
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            {/* Overview Section - Sticky Context Bar */}
+            <div className="sticky top-4 z-10 w-full mb-8 border-[4px] border-border bg-card shadow-[var(--shadow-brutal)]">
+              <div className="bg-foreground text-background p-4 border-b-[4px] border-border">
+                <h2 className="text-2xl font-black uppercase tracking-tighter">Aktive Kombination</h2>
+              </div>
+              <div className="p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 bg-accent">
+                <div className="flex flex-col border-l-[4px] border-foreground pl-3">
+                  <p className="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Zugfahrzeug</p>
+                  <p className="font-black text-lg leading-tight uppercase text-foreground">{combination.vehicle.name}</p>
                 </div>
-                {combination.trailer && (
-                  <div>
-                    <p className="text-xs font-semibold uppercase text-muted-foreground mb-1">Anhänger</p>
-                    <p className="font-semibold text-foreground">{combination.trailer.name}</p>
+                {combination.trailer ? (
+                  <div className="flex flex-col border-l-[4px] border-foreground pl-3">
+                    <p className="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Anhänger</p>
+                    <p className="font-black text-lg leading-tight uppercase text-foreground">{combination.trailer.name}</p>
+                  </div>
+                ) : (
+                  <div className="flex flex-col border-l-[4px] border-foreground pl-3 opacity-50">
+                    <p className="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Anhänger</p>
+                    <p className="font-black text-lg leading-tight uppercase text-foreground">KEINER</p>
                   </div>
                 )}
-                <div>
-                  <p className="text-xs font-semibold uppercase text-muted-foreground mb-1">Achsen</p>
-                  <p className="font-semibold text-foreground">
+                <div className="flex flex-col border-l-[4px] border-foreground pl-3">
+                  <p className="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Nutzlast / Total</p>
+                  <p className="font-black text-xl font-mono text-foreground">
+                    {combination.cargo.reduce((sum, item) => sum + item.weight_kg, 0).toLocaleString()} / {(
+                      combination.vehicle.gewichte.nutzlast_kg + (combination.trailer?.gewichte.nutzlast_kg || 0)
+                    ).toLocaleString()}{" "}
+                    KG
+                  </p>
+                </div>
+                <div className="flex flex-col border-l-[4px] border-foreground pl-3">
+                  <p className="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Achsen</p>
+                  <p className="font-black text-xl font-mono text-foreground">
                     {combination.vehicle.anzahl_achsen + (combination.trailer?.anzahl_achsen || 0)}
                   </p>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase text-muted-foreground mb-1">Leergewicht</p>
-                  <p className="font-semibold text-foreground">
-                    {(
-                      combination.vehicle.gewichte.leergewicht_kg + (combination.trailer?.gewichte.leergewicht_kg || 0)
-                    ).toLocaleString()}{" "}
-                    kg
-                  </p>
-                </div>
               </div>
-            </Card>
+            </div>
 
             {/* Cargo Selection Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <CargoManager
                 cargo={combination.cargo}
                 onAddCargo={handleAddCargo}
@@ -173,17 +208,16 @@ export default function Home() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-3">
-              <Button onClick={() => setStep("summary")} className="flex-1 py-6 text-base" size="lg">
-                Zusammenfassung anzeigen
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button onClick={() => setStep("summary")} className="flex-1 py-8 text-xl font-black uppercase tracking-wide border-[4px] border-border shadow-[var(--shadow-brutal)]">
+                ZUSAMMENFASSUNG ANZEIGEN
               </Button>
               <Button
                 onClick={() => setStep("selection")}
                 variant="outline"
-                className="flex-1 py-6 text-base"
-                size="lg"
+                className="flex-[0.5] py-8 text-xl font-black uppercase tracking-wide border-[4px] border-border"
               >
-                Zurück
+                ZURÜCK
               </Button>
             </div>
           </div>
@@ -191,20 +225,22 @@ export default function Home() {
 
         {/* Step 3: Summary & Dashboard */}
         {step === "summary" && combination.vehicle && (
-          <div className="space-y-6">
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <Dashboard combination={combination} />
 
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={handleStartNew}
-                className="flex-1 py-6 text-base bg-transparent"
-                size="lg"
-                variant="outline"
+                className="flex-1 py-8 text-xl font-black uppercase tracking-wide border-[4px] border-border bg-background text-foreground hover:bg-destructive hover:text-destructive-foreground"
               >
-                Neue Berechnung
+                NEUE BERECHNUNG
               </Button>
-              <Button onClick={() => setStep("cargo")} variant="ghost" className="flex-1 py-6 text-base" size="lg">
-                Zurück zur Beladung
+              <Button 
+                onClick={() => setStep("cargo")} 
+                variant="outline" 
+                className="flex-1 py-8 text-xl font-black uppercase tracking-wide border-[4px] border-border"
+              >
+                ZURÜCK ZUR BELADUNG
               </Button>
             </div>
           </div>

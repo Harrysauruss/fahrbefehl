@@ -10,21 +10,6 @@ export async function getVehiclesData() {
   return vehiclesData
 }
 
-export function getVehicleIcon(vehicle: Fahrzeug): string {
-  if (vehicle.typ === "zugfahrzeug") {
-    if (vehicle.anzahl_achsen === 2) return "🚙"
-    if (vehicle.anzahl_achsen === 4 && vehicle.gewichte.gesamtgewicht_kg < 20000) return "🚗"
-    if (vehicle.anzahl_achsen === 4) return "🚐"
-    return "🏎️"
-  }
-  if (vehicle.typ === "anhaenger") {
-    if (vehicle.anzahl_achsen === 1) return "📦"
-    if (vehicle.anzahl_achsen === 2) return "🚚"
-    return "🛒"
-  }
-  return "📦"
-}
-
 export function getCompatibleTrailers(vehicle: Fahrzeug, trailers: Fahrzeug[]): Fahrzeug[] {
   if (!vehicle.zughaken_details) return []
 
